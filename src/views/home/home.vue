@@ -6,7 +6,7 @@
   <div>
     <b-card
     overlay
-    img-src= imgUrl
+    :img-src= img
     img-alt="Card Image"
     text-variant="white"
     title="面对疾风把"
@@ -15,7 +15,7 @@
   <b-container class="bv-example-row">
   <b-row>
     <b-col></b-col>
-    <b-col>
+    <b-col style="margin-top: 150px;">
 <user-form></user-form>
     </b-col>
     <b-col></b-col>
@@ -33,12 +33,13 @@
 import NavHeader from '@/commponents/NavHeader'
 import NavFooter from '@/commponents/NavFooter'
 import UserForm from '@/commponents/UserForm'
-import imgUrl from '@/assets/111.jpg'
+import img from '@/assets/back.jpg'
+
 export default {
     name: 'Home',
     data(){
         return {
-            imgUrl
+            img
         }
     },
     components:{

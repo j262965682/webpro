@@ -1,5 +1,6 @@
 <template>
-<div>
+<b-nav type="dark" variant="info">
+
   <!-- <footer class="footer navbar-fixed-bottom ">
   //  <div class="container">
         <a class="" title="火星量化大师白皮书V1.0" href="https://master.cryptoquanter.com/static/whitepaper.pdf">白皮书</a>
@@ -8,13 +9,29 @@
     </div>
   </footer> -->
 
-  <b-navbar toggleable="lg" type="dark" variant="info" fixed="bottom">
+  <!-- <b-navbar toggleable="lg" type="dark" variant="info" fixed="bottom">
    <b-navbar-brand href="#" size="sm">关于我们</b-navbar-brand>   
    <b-navbar-brand href="#" size="sm">使用条款</b-navbar-brand>
    <b-navbar-brand href="#" size="sm">意见建议</b-navbar-brand>
    <b-navbar-brand href="#" size="sm">合作伙伴</b-navbar-brand>   
-  </b-navbar>
-</div>
+  </b-navbar> -->
+  <b-container class="bv-example-row" variant="info">
+  <b-row>
+    <b-col>关于我们</b-col>
+    <b-col>|</b-col>
+    <b-col>使用条款</b-col>
+    <b-col>|</b-col>
+    <b-col>意见建议</b-col>
+    <b-col>|</b-col>
+    <b-col>合作伙伴</b-col>
+  </b-row>
+  <b-row class="text-center">
+    <b-col>让我们一起致力于中华人民共和国的伟大复兴</b-col>
+
+  </b-row>
+</b-container>
+
+</b-nav>
 </template>
 
 <script>
