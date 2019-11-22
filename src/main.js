@@ -4,12 +4,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import fastClick from 'fastclick'
-import './assets/styles/reset.css'
-import './assets/styles/border.css'
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 
 Vue.config.productionTip = false
-fastClick.attach(document.body)
+Vue.use(BootstrapVue)
 
 /* eslint-disable no-new */
 new Vue({
