@@ -9,7 +9,10 @@
   </footer> -->
 
   <b-navbar toggleable="lg" type="dark" variant="info" fixed="bottom">
-   <b-navbar-brand href="#">NavBar</b-navbar-brand>      
+   <b-navbar-brand href="#" size="sm">关于我们</b-navbar-brand>   
+   <b-navbar-brand href="#" size="sm">使用条款</b-navbar-brand>
+   <b-navbar-brand href="#" size="sm">意见建议</b-navbar-brand>
+   <b-navbar-brand href="#" size="sm">合作伙伴</b-navbar-brand>   
   </b-navbar>
 </div>
 </template>
