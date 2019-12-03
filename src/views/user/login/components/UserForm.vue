@@ -6,6 +6,7 @@
         label="Email address:"
         label-for="input-1"
         style="color: #0000FF;font-size:20px;"
+        description="We'll never share your email with anyone else."
       >
         <b-form-input
           id="input-1"
@@ -19,9 +20,9 @@
       <b-form-group id="input-group-2" label="Your PassWord:" label-for="input-2" style="color: #0000FF;font-size:20px;">
         <b-form-input
           id="input-2"
-          v-model="form.PassWord"
+          v-model="form.password"
           required
-          placeholder="Enter PassWord"
+          placeholder="Enter password"
         ></b-form-input>
       </b-form-group>
 <!-- 
@@ -57,32 +58,18 @@
       return {
         form: {
           email: '',
-          name: '',
-          food: null,
-          checked: []
-        },
-        foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
-        show: true
+          password: ''
+        }
       }
     },
     methods: {
-      onSubmit(evt) {
-        evt.preventDefault()
-        alert(JSON.stringify(this.form))
+      onSubmit() {
+        this.$emit('login',this.form.email,this.form.password)
       },
-      onReset(evt) {
-        evt.preventDefault()
-        // Reset our form values
-        this.form.email = ''
-        this.form.name = ''
-        this.form.food = null
-        this.form.checked = []
-        // Trick to reset/clear native browser form validation state
-        this.show = false
-        this.$nextTick(() => {
-          this.show = true
-        })
+      onReset() {
+        this.$router.replace('/user/register')
       }
     }
   }
+  
 </script>

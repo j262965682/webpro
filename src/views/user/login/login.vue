@@ -16,7 +16,7 @@
   <b-row>
     <b-col></b-col>
     <b-col style="margin-top: 150px;">
-<user-form></user-form>
+<user-form @login='loginon'></user-form>
     </b-col>
     <b-col></b-col>
   </b-row>
@@ -30,24 +30,37 @@
 </template>
 
 <script>
-import NavHeader from '@/commponents/NavHeader'
-import NavFooter from '@/commponents/NavFooter'
-import UserForm from '@/commponents/UserForm'
+import NavHeader from '@/views/user/login/components/NavHeader'
+import NavFooter from '@/views/user/login/components/NavFooter'
+import UserForm from '@/views/user/login/components/UserForm'
 import img from '@/assets/back.jpg'
 
 export default {
-    name: 'Home',
+    name: 'login',
     data(){
         return {
-            img
+            img,
+            msg,
         }
     },
+
     components:{
         NavHeader,
         NavFooter,
         UserForm,
+    },
+    methods: {
+      loginon(data){
+        axios.post("http://localhost:8011/api/user/login",{
+          email: data.form.email,
+          password: data.form.password
+        }).then(res=>{
+          this.msg = res.data.code
+        }).catch(function (error){
+          console.log("error init."+error)
+        })
+      }
     }
-
 }
 </script>
 

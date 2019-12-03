@@ -1,8 +1,8 @@
 <template>
 <div>
-  <b-navbar toggleable="lg" type="dark" variant="light">
+  <b-navbar toggleable="lg" type="light" variant="light">
     <b-navbar-brand href="#" variant="primary">
-      <img src="./../assets/logo.png" class="d-inline-block align-top" alt="Kitten">
+      <img src="@/assets/logo.png" class="d-inline-block align-top" alt="Kitten">
       MAGE
     </b-navbar-brand>
 
@@ -23,10 +23,11 @@
           <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
         </b-nav-form>
 
-        <b-navbar-nav variant="dark">
-           <b-nav-item href="#"  >注册</b-nav-item>
+        <b-navbar-nav >
+           <b-nav-item href="/user/register" class="bnvitem" >注册</b-nav-item>
            <b-nav-item href="#"  >|</b-nav-item>
-           <b-nav-item href="#"  >登录</b-nav-item>
+           <b-nav-item href="/user/register" class="bnvitem" >登录</b-nav-item>
+
 
         </b-navbar-nav>
 
@@ -42,6 +43,3 @@ export default {
   
 }
 </script>
-
-<style scoped>
-</style>

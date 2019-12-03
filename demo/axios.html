@@ -51,10 +51,7 @@
                 post:function(){
                     axios.post("../package.json",{
                         userId:"888"
-                    },{
-                        headers:{
-                            token:"tom"
-                        }
+                    }
                     }).then(res=>{
                         this.msg = res.data;
                     }).catch(function (error){
